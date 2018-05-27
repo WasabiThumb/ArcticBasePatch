@@ -5,7 +5,7 @@
 hook.Add("CalcMainActivity", "changeAnimsPerBaseWEP", function(ply, vel)
 	local wep = ply:GetActiveWeapon()
 	if IsValid(wep) then
-		if wep.Anim_Run_Bool then
+		if wep.Anim_Run_Bool and ply:KeyDown(IN_RUN) then
 			return wep.Anim_Run
 		end
 	end
